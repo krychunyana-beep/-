@@ -1,0 +1,90 @@
+/* ====== Підключення шрифтів ====== */
+@font-face {
+  font-family: "Cy Grotesk Wide";
+  src: url("fonts/cy-grotesk-wide.ttf") format("truetype");
+}
+
+/* ====== Головні змінні ====== */
+:root {
+  --main-bg: rgba(113, 107, 107, 0.55);
+  --accent: #ff6600;
+  --light: #ffffff;
+  --font-main: "Cy Grotesk Wide", "Roboto", sans-serif;
+}
+
+/* ====== Базові стилі ====== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url("фон.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: var(--font-main);
+  color: var(--light);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ====== Основне розташування ====== */
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap; /* для адаптації */
+}
+
+aside {
+  flex-shrink: 0;
+}
+
+section {
+  flex-grow: 1;
+}
+
+/* ====== Контейнери ====== */
+header, section, footer {
+  background-color: var(--main-bg);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* ====== Заголовки ====== */
+h1, h2, h3 {
+  text-align: center;
+  color: #f9f9f9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* ====== Посилання ====== */
+a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ====== Бокова панель (меню + пошук в рядок) ====== */
+aside {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(120, 114, 114, 0.7);
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
